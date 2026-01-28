@@ -18,7 +18,7 @@
 
 
 .pokemon-card:has(.type-electric) {
-  background: #f7d02c; /* Pikachu */
+  background : yellow;
 }
 
 .pokemon-card:has(.type-grass) {
@@ -43,14 +43,14 @@
 }
 
 
-
-
 .pokemon-card:has(.type-psychic) {
   background: #f95587;
 }
 
 body {
-  background-color: darkred;
+  background-color: yellow;
 }
+
+
 
  

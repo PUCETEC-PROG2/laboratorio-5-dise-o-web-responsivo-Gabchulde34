@@ -1,0 +1,28 @@
+
+.trainers-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+}
+
+.trainer-card:has(.status-active) {
+  background: linear-gradient(135deg, #7ac74c, #a7db8d);
+}
+
+.trainer-card:has(.trainer-status:not(.status-champion):contains("Líder")) {
+  background: linear-gradient(135deg, #f7d02c, #fbe27a);
+}
+
+.trainer-card:has(.status-champion) {
+  background: linear-gradient(135deg, #6390f0, #9db7f5);
+}
+
+
+body {
+    background-color: aqua;
+}
+
+
