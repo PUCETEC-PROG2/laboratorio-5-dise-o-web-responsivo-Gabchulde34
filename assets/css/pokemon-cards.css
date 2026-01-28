@@ -1,0 +1,56 @@
+
+.pokemon-grid {
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  flex-wrap: wrap;           
+  gap: 25px;
+  padding: 40px;
+}
+
+.pokemon-card {
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.pokemon-card:has(.type-electric) {
+  background: #f7d02c; /* Pikachu */
+}
+
+.pokemon-card:has(.type-grass) {
+  background: #7ac74c; /* Bulbasaur */
+}
+
+.pokemon-card:has(.type-fire) {
+  background: #ee8130; /* Charmander */
+}
+
+.pokemon-card:has(.type-water) {
+  background: #6390f0; /* Squirtle */
+}
+
+.pokemon-card:has(.type-ghost) {
+  background: #735797;
+}
+
+
+.pokemon-card:has(.type-normal) {
+  background: #a8a77a;
+}
+
+
+
+
+.pokemon-card:has(.type-psychic) {
+  background: #f95587;
+}
+
+body {
+  background-color: darkred;
+}
+
+ 
