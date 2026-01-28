@@ -1,56 +1,158 @@
-
+/* ============================= */
+/* CONTENEDOR POKEMONS (FLEX) */
+/* ============================= */
 .pokemon-grid {
   display: flex;
-  justify-content: center;   
-  align-items: center;
-  flex-wrap: wrap;           
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
   gap: 25px;
   padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* ============================= */
+/* CARD */
+/* ============================= */
 .pokemon-card {
+  width: 220px;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  color: #333;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-
-.pokemon-card:has(.type-electric) {
-  background : yellow;
+/* HOVER */
+.pokemon-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.35);
 }
 
+/* ============================= */
+/* IMAGEN */
+/* ============================= */
+.pokemon-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* ============================= */
+/* INFO */
+/* ============================= */
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ============================= */
+/* NOMBRE */
+/* ============================= */
+.pokemon-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ============================= */
+/* TIPO (PASTILLA) */
+/* ============================= */
+.pokemon-type {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+/* ============================= */
+/* COLORES DE FONDO POR TIPO */
+/* ============================= */
+
+/* ELÉCTRICO (corrige typhe-electric) */
+.pokemon-card:has(.type-electric),
+.pokemon-card:has(.typhe-electric) {
+  background: #f7d02c;
+}
+
+/* PLANTA */
 .pokemon-card:has(.type-grass) {
-  background: #7ac74c; /* Bulbasaur */
+  background: #7ac74c;
 }
 
+/* FUEGO */
 .pokemon-card:has(.type-fire) {
-  background: #ee8130; /* Charmander */
+  background: #ee8130;
 }
 
+/* AGUA */
 .pokemon-card:has(.type-water) {
-  background: #6390f0; /* Squirtle */
+  background: #6390f0;
 }
 
+/* FANTASMA */
 .pokemon-card:has(.type-ghost) {
   background: #735797;
 }
 
-
+/* NORMAL */
 .pokemon-card:has(.type-normal) {
   background: #a8a77a;
 }
 
-
+/* PSÍQUICO */
 .pokemon-card:has(.type-psychic) {
   background: #f95587;
 }
 
-body {
-  background-color: yellow;
+/* ============================= */
+/* COLOR DE LAS PASTILLAS */
+/* ============================= */
+.type-electric,
+.typhe-electric {
+  background: #c7a600;
 }
 
+.type-grass {
+  background: #3c6e2f;
+}
 
+.type-fire {
+  background: #9c531f;
+}
 
- 
+.type-water {
+  background: #445e9c;
+}
+
+.type-ghost {
+  background: #493963;
+}
+
+.type-normal {
+  background: #6d6d4e;
+}
+
+.type-psychic {
+  background: #a13959;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .pokemon-card {
+    width: 180px;
+  }
+
+  .pokemon-image {
+    width: 120px;
+    height: 120px;
+  }
+}

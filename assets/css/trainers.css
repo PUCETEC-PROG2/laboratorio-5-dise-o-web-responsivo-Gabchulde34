@@ -1,28 +1,62 @@
-
+/* ============================= */
+/* GRID DE ENTRENADORES */
+/* ============================= */
 .trainers-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 30px;
   padding: 40px;
 }
 
+/* ============================= */
+/* ESTADOS (SIN :contains) */
+/* ============================= */
+
+/* ACTIVO */
+.trainer-card .status-active {
+  box-shadow: inset 0 0 0 9999px #7ac74c;
+}
+
+/* LÍDER */
+.trainer-card .status-leader {
+  box-shadow: inset 0 0 0 9999px #f7d02c;
+}
+
+/* CAMPEÓN */
+.trainer-card .status-champion {
+  box-shadow: inset 0 0 0 9999px #6390f0;
+}
+
+/* ============================= */
+/* GRADIENTES (MEJORA VISUAL) */
+/* ============================= */
+.trainer-card {
+  border-radius: 20px;
+  padding: 20px;
+  color: #222;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ACTIVO */
 .trainer-card:has(.status-active) {
   background: linear-gradient(135deg, #7ac74c, #a7db8d);
 }
 
-.trainer-card:has(.trainer-status:not(.status-champion):contains("Líder")) {
+/* LÍDER */
+.trainer-card:has(.status-leader) {
   background: linear-gradient(135deg, #f7d02c, #fbe27a);
 }
 
+/* CAMPEÓN */
 .trainer-card:has(.status-champion) {
   background: linear-gradient(135deg, #6390f0, #9db7f5);
 }
 
-
+/* ============================= */
+/* BODY */
+/* ============================= */
 body {
-    background-color: aqua;
+  background-color: aqua;
 }
-
-
